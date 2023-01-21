@@ -1,0 +1,48 @@
+.intro {
+  font-family: "Impact";
+  background-image: url("./images/intro-bg.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: rem(110);
+  padding-bottom: rem(30);
+
+  &__title {
+    margin-bottom: rem(10);
+    font-weight: 400;
+    font-size: rem(76);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: rem(10);
+    font-weight: 400;
+    font-size: rem(48);
+    align-self: center;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: rem(10);
+
+    span {
+      display: block;
+      font-size: rem(34);
+      line-height: 1;
+      color: var(--gold);
+    }
+  }
+
+  &__descr {
+    font-family: Roboto Condensed, sans-serif;
+    font-size: rem(15.53);
+    color: var(--dg);
+  }
+
+  &__arrow {
+    margin-top: auto;
+    align-self: center;
+  }
+}

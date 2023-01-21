@@ -1,0 +1,31 @@
+.header {
+  position: absolute;
+  background: linear-gradient(180deg, #D8D4CA 0%, rgba(217, 217, 217, 0) 100%);
+  left: 0;
+  right: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: rem(25);
+}
+
+.menu {
+  padding-top: rem(50);
+  display: flex;
+  gap: rem(40);
+  font-size: rem(15.53);
+  color: var(--dg);
+
+  &__left {
+    padding-left: rem(25);
+  }
+
+  &__right {
+    padding-right: rem(86);
+  }
+}
