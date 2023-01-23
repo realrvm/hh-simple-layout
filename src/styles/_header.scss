@@ -1,8 +1,14 @@
 .header {
   position: absolute;
-  background: linear-gradient(180deg, #D8D4CA 0%, rgba(217, 217, 217, 0) 100%);
+  background: linear-gradient(180deg, #d8d4ca 0%, rgba(217, 217, 217, 0) 100%);
   left: 0;
   right: 0;
+
+  &__wrapper {
+    max-width: rem(1220);
+    padding: 0 rem(10);
+    margin-inline: auto;
+  }
 }
 
 .nav {
