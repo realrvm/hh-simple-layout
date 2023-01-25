@@ -1,0 +1,135 @@
+.evo {
+  &__inner {
+    background-color: var(--dg);
+    color: var(--white);
+    padding: rem(100) 0 rem(50);
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 rem(20);
+    margin-bottom: rem(198);
+    position: relative;
+
+    &:before {
+      content: "";
+      background-image: url("./images/decor1.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      width: rem(185);
+      height: rem(213);
+      top: rem(195);
+      left: rem(-95);
+    }
+
+    &:after {
+      content: "";
+      background-image: url("./images/decor2.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      width: rem(498);
+      height: rem(572);
+      top: rem(293);
+      left: rem(-40);
+    }
+
+    &-title,
+    &-text {
+      flex: 1;
+    }
+
+    &-title {
+      font-weight: 300;
+      font-size: rem(32);
+      line-height: lh(37.5, 32);
+    }
+
+    &-text {
+      p:first-child {
+        margin-bottom: rem(30);
+      }
+    }
+
+    &-img {
+      display: block;
+      max-width: rem(725);
+      margin: 0 auto rem(58);
+      position: relative;
+      z-index: 1;
+    }
+
+    &-footer-text {
+      display: flex;
+      gap: 0 rem(65);
+    }
+  }
+
+  &__yt {
+    padding: rem(126) 0 rem(50);
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url("./images/evo-1.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("./images/evo-2.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-text {
+      p:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+
+      p:nth-child(1) {
+        max-width: rem(285);
+      }
+
+      p:nth-child(2) {
+        max-width: rem(437);
+      }
+
+      p:nth-child(3) {
+        max-width: rem(590);
+        margin-bottom: rem(100);
+      }
+    }
+  }
+
+  &__video {
+    background-image: url("./images/evo-yt-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: rem(263);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-link {
+      span,
+      img {
+        display: block;
+      }
+
+      img {
+        margin-inline: auto;
+      }
+
+      span {
+        color: var(--white);
+      }
+    }
+  }
+}
