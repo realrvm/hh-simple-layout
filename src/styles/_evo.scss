@@ -74,8 +74,10 @@
       background-image: url("./images/evo-1.png");
       background-repeat: no-repeat;
       position: absolute;
-      top: 0;
-      left: 0;
+      width: rem(274);
+      height: rem(252);
+      top: rem(-23);
+      left: rem(357);
     }
 
     &::after {
@@ -83,8 +85,10 @@
       background-image: url("./images/evo-2.png");
       background-repeat: no-repeat;
       position: absolute;
-      top: 0;
-      left: 0;
+      width: rem(324);
+      height: rem(302);
+      top: rem(125);
+      left: rem(600);
     }
 
     &-text {

@@ -1,0 +1,43 @@
+- const quote1 = {title: 'Чемпион Am', name: 'Анджей Левандовски ', content: '«Я очень доволен титулом, моей второй победой в Am и четвертой в Super Trofeo, мне очень приятно делать это в этом году, потому что уровень соревнований очень высок. Должен сказать, сегодня было довольно легко, так как я все время контролировал ситуацию».'};
+- const quote2 =  {title:'Обладатель кубка Lamborghini', name: 'Жерар ван дер Хорст', content: '«Я очень доволен титулом, моей второй победой в Am и четвертой в Super Trofeo, мне очень приятно делать это в этом году, потому что уровень соревнований очень высок. Должен Обладатель кубка Lamborghini  добавил: «Здорово выиграть титул, спустя четыре года после последнего...'};
+- const slide1 = {img: 'blog-1.jpg', title: 'НЕЛЬСОН ПИКЕ СТАЛ ПОБЕДИТЕЛЕМ ГРАНД-ФИНАЛА В ПОРТИМАНЕ', content:'Нельсон Пике-младший из Ansa Motorsports обеспечил возвращение титула Lamborghini Super Trofeo Grand Finals в Северную Америку впервые с 2017 года после победы и второе место в паре 50-минутных гонок на Autodromo Nacionale do Algarve в Портимане.Между тем, титул Pro-Am был подорван, поскольку Брайан Ортис и Себастьян Карасо из...', link: '#'};
+- const slide2 = {img: 'blog-2.jpg', title: 'ГРАНД ФИНАЛ. ДЕНЬ 1', content:'Утренний дождь означал, что мокрая гонка была объявлена до старта, и перед большинством экипажей стоял выбор: использовать слики или мокрые шины. Большинство участников предпочли мокрую трассу, но поулист Спинелли начал гонку на сликах и сразу же поплатился за это. Huracan № 61 опустился вниз, заняв всего 28-е место, поскольку...', link: '#'};
+
+mixin quote(title, name, content)
+  .blog__quotes-quote
+    blockquote
+      span= title
+      h4= name
+      p= content
+
+mixin slide(img, title, content, link)
+  img(src=require('./images/' + img) alt='')
+  h4= title
+  p= content
+  a(href= link) читать подробнее...
+
+section.blog
+  .container
+    h3.blog__title БЛОГ
+    .blog__inner
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            +slide(slide1.img, slide1.title, slide1.content, slide1.link)
+          .swiper-slide
+            +slide(slide2.img, slide2.title, slide2.content, slide2.link)
+          .swiper-slide
+            +slide(slide2.img, slide2.title, slide2.content, slide1.link)
+          .swiper-slide
+            +slide(slide2.img, slide2.title, slide2.content, slide1.link)
+      .swiper-buttons
+        .swiper-button-left
+          img(src=require('./images/arrow-left.svg'))
+        .swiper-button-right
+          img(src=require('./images/arrow-right.svg'))
+    .blog__quotes
+      .blog__quotes-content
+        +quote(quote1.title, quote1.name, quote1.content)
+        +quote(quote2.title, quote2.name, quote2.content)
+      .blog__quotes-img
+        img(src=require('./images/blog-quotas.png'))
