@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--dg);
+  color: var(--white);
+  padding: rem(100) 0 rem(80);
+
+  &__title {
+    font-size: rem(32);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: rem(50);
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 rem(20);
+    margin-bottom: rem(85);
+
+    dt {
+      font-weight: 700;
+      font-size: rem(16);
+      margin-bottom: rem(20);
+    }
+
+    dd {
+      font-size: rem(16);
+      margin-bottom: rem(10);
+    }
+
+    li:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    &-social {
+      display: flex;
+      gap: 0 rem(20);
+    }
+
+    &-address-top {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

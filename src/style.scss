@@ -39,6 +39,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 @import "./styles/common";
 @import "./styles/header";
 @import "./styles/intro";
@@ -46,3 +50,4 @@ a {
 @import "./styles/track";
 @import "./styles/evo";
 @import "./styles/blog";
+@import "./styles/footer";
