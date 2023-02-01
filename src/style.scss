@@ -1,12 +1,10 @@
 @import "./styles/reset";
+$base-font-size: 14px;
 
 html {
   box-sizing: border-box;
-  font-size: 87.5%;
+  font-size: $base-font-size;
 }
-
-$base-font-size: 14px;
-@import "./styles/sass";
 
 :root {
   --black: hsla(0, 0%, 2%, 1);
@@ -43,6 +41,7 @@ li {
   list-style: none;
 }
 
+@import "./styles/sass";
 @import "./styles/common";
 @import "./styles/header";
 @import "./styles/intro";

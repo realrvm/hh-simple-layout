@@ -6,6 +6,13 @@ import "./style.scss";
 import "swiper/css";
 
 function init() {
+  const btn = document.querySelector(".menu__mobile-btn");
+  const menuMobile = document.querySelector(".menu__mobile-bottom");
+
+  btn.addEventListener("click", () => {
+    menuMobile.classList.toggle("menu--open");
+  })
+
   const swiper = new Swiper(".swiper", {
     modules: [Navigation],
     slidesPerView: 2,

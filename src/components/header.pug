@@ -1,5 +1,6 @@
 - const menu_left = ['О гонке', 'Трек', 'Lamborghini Super trofeo', 'Новости'];
 - const menu_right = ['Купить билеты', 'Смотреть онлайн', 'Контакты'];
+- const menu_full = ['О гонке', 'Трек', 'Lamborghini Super trofeo', 'Новости', 'Купить билеты', 'Смотреть онлайн', 'Контакты']
 
 header.header
   .header__wrapper
@@ -11,5 +12,22 @@ header.header
       img.logo(src=require('../images/logo.svg') alt='logo')
       ul.menu.menu__right
         each item in menu_right
+          li
+            a(href='#')= item
+    nav.nav__tablet
+      img.logo__small(src=require('../images/logo.svg') alt='logo')
+      ul.menu__tablet-right
+        each item in menu_full
+          li
+            a(href='#')= item
+    nav.nav__mobile
+      .menu__mobile-top
+        img.logo__small(src=require('../images/logo.svg') alt='logo')
+        button.menu__mobile-btn
+          span
+          span
+          span
+      ul.menu__mobile-bottom
+        each item in menu_full
           li
             a(href='#')= item

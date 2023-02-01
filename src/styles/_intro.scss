@@ -11,12 +11,30 @@
   padding-top: rem(110);
   padding-bottom: rem(30);
 
+  @include maxq(1200px) {
+    background-position: left center;
+  }
+
   &__title {
     margin-bottom: rem(10);
     font-weight: 400;
     font-size: rem(76);
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    @include maxq(1100px) {
+      font-size: rem(64);
+    }
+
+    @include maxq(800px) {
+      font-size: rem(48);
+      margin-top: rem(30);
+    }
+
+    @include maxq(450px) {
+      font-size: rem(32);
+      margin-top: rem(50);
+    }
   }
 
   &__subtitle {
@@ -27,11 +45,35 @@
     border-bottom: 1px solid var(--black);
     padding-bottom: rem(10);
 
+    @include maxq(1100px) {
+      font-size: rem(42);
+    }
+
+    @include maxq(800px) {
+      font-size: rem(32);
+    }
+
+    @include maxq(450px) {
+      font-size: rem(24);
+    }
+
     span {
       display: block;
       font-size: rem(34);
       line-height: 1;
       color: var(--gold);
+
+      @include maxq(1100px) {
+        font-size: rem(30);
+      }
+
+      @include maxq(800px) {
+        font-size: rem(26);
+      }
+
+      @include maxq(450px) {
+        font-size: rem(20);
+      }
     }
   }
 

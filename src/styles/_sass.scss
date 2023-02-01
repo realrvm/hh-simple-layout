@@ -20,7 +20,19 @@
   @return $remValue;
 }
 
-@function lh($height, $base) {
+@function lh($height, $base: 16) {
   $lh-value: math.div(strip-units($height), strip-units($base));
   @return to-fixed($lh-value, 1);
+}
+
+@mixin maxq($query) {
+  @media screen and (max-width: $query) {
+    @content;
+  }
+}
+
+@mixin minq($query) {
+  @media screen and (min-width: $query) {
+    @content;
+  }
 }

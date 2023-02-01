@@ -14,10 +14,25 @@
 .nav {
   display: flex;
   justify-content: space-between;
+
+  &__tablet,
+  &__mobile {
+    display: none;
+  }
+
+  @include maxq(1100px) {
+    display: none;
+  }
 }
 
 .logo {
   padding-top: rem(25);
+
+  &__small {
+    @include maxq(1100px) {
+      width: rem(70);
+    }
+  }
 }
 
 .menu {
@@ -33,5 +48,85 @@
 
   &__right {
     padding-right: rem(86);
+  }
+
+  &__tablet-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 rem(15);
+    padding-right: rem(30);
+    font-size: rem(15.53);
+    color: var(--dg);
+  }
+
+  &__mobile {
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 rem(20);
+      z-index: 10;
+    }
+
+    &-btn {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      span {
+        width: rem(60);
+        height: rem(8);
+        background-color: var(--white);
+      }
+    }
+
+    &-bottom {
+      display: none;
+    }
+
+    &-bottom.menu--open {
+      position: absolute;
+      inset: 0;
+      background-color: var(--dg);
+      color: var(--white);
+      height: 100vh;
+      padding-top: 30vh;
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      align-items: center;
+      font-size: rem(32);
+      z-index: 5;
+
+      @include maxq(450px) {
+       font-size: rem(24);
+      }
+    }
+  }
+}
+
+.nav__tablet {
+  @include maxq(1100px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(25);
+  }
+
+  @include maxq(800px) {
+    display: none;
+  }
+}
+
+.nav__mobile {
+  @include maxq(800px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(40);
   }
 }
