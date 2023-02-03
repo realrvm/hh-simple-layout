@@ -3,11 +3,20 @@
   color: var(--white);
   padding: rem(100) 0 rem(80);
 
+  @include maxq(850px) {
+    padding: rem(50) 0 rem(40);
+  }
+
   &__title {
     font-size: rem(32);
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: rem(50);
+
+    @include maxq(450px) {
+      font-size: rem(26);
+      margin-bottom: rem(30);
+    }
   }
 
   &__contacts {
@@ -15,6 +24,12 @@
     justify-content: space-between;
     gap: 0 rem(20);
     margin-bottom: rem(85);
+
+    @include maxq(850px) {
+      flex-direction: column;
+      gap: rem(20) 0;
+      margin-bottom: rem(45);
+    }
 
     dt {
       font-weight: 700;
@@ -45,5 +60,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include maxq(850px) {
+      flex-direction: column;
+      gap: rem(20) 0;
+      justify-content: center;
+    }
+
+    a:has(img) {
+      @include maxq(850px) {
+        order: -1;
+      }
+    }
   }
 }

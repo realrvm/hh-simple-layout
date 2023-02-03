@@ -1,15 +1,27 @@
 .info {
   padding: rem(100) 0;
 
+  @include maxq(855px) {
+    padding: rem(50) 0;
+  }
+
   &__title {
     text-transform: uppercase;
     font-weight: 300;
     font-size: rem(32);
     line-height: lh(38, 32);
+
+    @include maxq(450px) {
+      font-size: rem(26);
+    }
   }
 
   &__promo {
     margin-bottom: rem(100);
+
+    @include maxq(855px) {
+      margin-bottom: rem(50);
+    }
   }
 
   &__promo-descr {
@@ -18,8 +30,19 @@
     gap: 0 rem(20);
     margin: rem(34) 0 rem(30);
 
+    @include maxq(855px) {
+      flex-direction: column;
+      margin: rem(24) 0 rem(20);
+    }
+
     p {
       flex: 1;
+    }
+
+    p:first-child {
+      @include maxq(855px) {
+        margin-bottom: rem(24);
+      }
     }
 
     p:last-child {
@@ -38,17 +61,27 @@
     justify-content: space-between;
     gap: 0 rem(20);
 
+    @include maxq(855px) {
+      flex-direction: column;
+      margin-bottom: rem(50);
+    }
+
     &-title {
       margin-bottom: rem(30);
     }
 
     &-descr {
-      p {
-        max-width: rem(352);
-      }
-
       p:first-of-type {
         margin-bottom: rem(30);
+      }
+
+      p {
+        max-width: rem(352);
+
+        @include maxq(855px) {
+          max-width: 100%;
+          margin-bottom: rem(20);
+        }
       }
     }
 
@@ -63,9 +96,18 @@
     justify-content: space-between;
     gap: 0 rem(20);
 
+    @include maxq(855px) {
+      flex-direction: column;
+    }
+
     &-descr {
       p {
         max-width: rem(377);
+
+        @include maxq(855px) {
+          max-width: 100%;
+          margin-bottom: rem(20);
+        }
       }
     }
 
@@ -93,6 +135,10 @@
 
       td {
         padding-bottom: rem(20);
+
+        @include maxq(450px) {
+          padding: 0 rem(5) rem(20);
+        }
       }
     }
   }

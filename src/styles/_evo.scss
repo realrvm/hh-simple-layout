@@ -3,6 +3,10 @@
     background-color: var(--dg);
     color: var(--white);
     padding: rem(100) 0 rem(50);
+
+    @include maxq(855px) {
+      padding: rem(50) 0;
+    }
   }
 
   &__descr {
@@ -11,6 +15,12 @@
     gap: 0 rem(20);
     margin-bottom: rem(198);
     position: relative;
+
+    @include maxq(855px) {
+      flex-direction: column;
+      gap: rem(20) 0;
+      margin-bottom: rem(100);
+    }
 
     &:before {
       content: "";
@@ -21,6 +31,10 @@
       height: rem(213);
       top: rem(195);
       left: rem(-95);
+
+      @include maxq(855px) {
+        display: none;
+      }
     }
 
     &:after {
@@ -32,6 +46,10 @@
       height: rem(572);
       top: rem(293);
       left: rem(-40);
+
+      @include maxq(800px) {
+        display: none;
+      }
     }
 
     &-title,
@@ -57,17 +75,31 @@
       margin: 0 auto rem(58);
       position: relative;
       z-index: 1;
+
+      @include maxq(768px) {
+        width: 90%;
+      }
     }
 
     &-footer-text {
       display: flex;
       gap: 0 rem(65);
+
+      @include maxq(800px) {
+        text-align: center;
+        flex-direction: column;
+        gap: rem(20) 0;
+      }
     }
   }
 
   &__yt {
     padding: rem(126) 0 rem(50);
     position: relative;
+
+    @include maxq(650px) {
+      padding: rem(60) 0 rem(25);
+    }
 
     &::before {
       content: "";
@@ -78,6 +110,10 @@
       height: rem(252);
       top: rem(-23);
       left: rem(357);
+
+      @include maxq(650px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -89,6 +125,10 @@
       height: rem(302);
       top: rem(125);
       left: rem(600);
+
+      @include maxq(800px) {
+        display: none;
+      }
     }
 
     &-text {
@@ -98,15 +138,28 @@
 
       p:nth-child(1) {
         max-width: rem(285);
+
+        @include maxq(650px) {
+          max-width: 100%;
+        }
       }
 
       p:nth-child(2) {
         max-width: rem(437);
+
+        @include maxq(650px) {
+          max-width: 100%;
+        }
       }
 
       p:nth-child(3) {
         max-width: rem(590);
         margin-bottom: rem(100);
+
+        @include maxq(650px) {
+          max-width: 100%;
+          margin-bottom: rem(50);
+        }
       }
     }
   }

@@ -11,16 +11,23 @@ function init() {
 
   btn.addEventListener("click", () => {
     menuMobile.classList.toggle("menu--open");
-  })
+  });
 
   const swiper = new Swiper(".swiper", {
     modules: [Navigation],
-    slidesPerView: 2,
-    spaceBetween: 20,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-right",
       prevEl: ".swiper-button-left",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
   });
 }

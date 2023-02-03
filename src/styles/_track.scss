@@ -6,6 +6,10 @@
   padding: rem(47) 0 rem(90);
   height: 100vh;
 
+  @include maxq(855px) {
+    padding: rem(47) 0;
+  }
+
   &__inner {
     height: 100%;
   }
@@ -24,11 +28,19 @@
   &__descr {
     p {
       max-width: rem(434);
+
+      @include maxq(855px) {
+        max-width: 100%;
+      }
     }
   }
 
   &__img {
     max-width: rem(742);
     align-self: center;
+
+    @include maxq(855px) {
+      width: 90%;
+    }
   }
 }
